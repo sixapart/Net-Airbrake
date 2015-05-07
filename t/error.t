@@ -18,14 +18,14 @@ subtest 'new from HashRef' => sub {
 };
 
 subtest 'new from Object' => sub {
-    package User {
-        use Class::Tiny qw(id email);
-    };
+    my $obj = Net::Airbrake::Error->new({
+        type    => 'test',
+        message => 'Error!!!',
+    });
 
-    my $user = User->new({ id => 1, email => 'user@example.com' });
-    my $e = Net::Airbrake::Error->new($user);
+    my $e = Net::Airbrake::Error->new($obj);
     ok $e;
-    is $e->type, 'User';
+    is $e->type, 'Net::Airbrake::Error';
     ok $e->message;
     is $e->backtrace, undef;
 };
