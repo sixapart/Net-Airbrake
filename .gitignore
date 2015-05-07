@@ -27,3 +27,6 @@
 MYMETA.*
 
 /Net-Airbrake-*
+/.build
+!Build/
+!META.json

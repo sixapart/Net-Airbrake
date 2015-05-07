@@ -1,4 +1,4 @@
-
+[![Build Status](https://travis-ci.org/sixapart/Net-Airbrake.svg?branch=master)](https://travis-ci.org/sixapart/Net-Airbrake)
 # NAME
 
 Net::Airbrake - Airbrake Notifier API Client

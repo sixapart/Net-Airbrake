@@ -59,6 +59,17 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/sixapart/Net-Airbrake/issues"
+      },
+      "homepage" : "https://github.com/sixapart/Net-Airbrake",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/sixapart/Net-Airbrake.git",
+         "web" : "https://github.com/sixapart/Net-Airbrake"
+      }
+   },
    "version" : "0.01",
    "x_authority" : "cpan:SIXAPART",
    "x_contributors" : [
