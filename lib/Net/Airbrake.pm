@@ -36,8 +36,6 @@ sub send {
 
     return unless $self->has_error;
 
-    $self->_conceal_options($option);
-
     my $context = {
         os          => $^O,
         language    => "Perl $^V",
@@ -75,17 +73,6 @@ sub _url {
     my $self = shift;
 
     "https://airbrake.io/api/v3/projects/@{[$self->project_id]}/notices?key=@{[$self->api_key]}";
-}
-
-sub _conceal_options {
-    my $self = shift;
-    my ($option) = @_;
-
-    for my $opt (qw(environment session params)) {
-        for my $key (grep { /(?:cookie|password)/i } keys %{$option->{$opt}}) {
-            $option->{$opt}{$key} =~ s/./*/g;
-        }
-    }
 }
 
 1;

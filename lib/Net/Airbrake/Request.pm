@@ -6,6 +6,20 @@ use warnings;
 use JSON qw(encode_json);
 use Class::Tiny qw(errors context environment session params);
 
+sub BUILDARGS {
+    my $class = shift;
+    my ($param) = @_;
+
+    ## conceal secure parameters
+    for my $member (qw(environment session params)) {
+        for my $key (grep { /(?:cookie|password)/i } keys %{$param->{$member}}) {
+            $param->{$member}{$key} =~ s/./*/g;
+        }
+    }
+
+    $param;
+}
+
 sub to_json {
     my $self = shift;
 
