@@ -4,7 +4,7 @@
       "Six Apart, Ltd. <sixapart@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v2.3.0, CPAN::Meta::Converter version 2.140640",
+   "generated_by" : "Minilla/v2.4.1, CPAN::Meta::Converter version 2.140640",
    "license" : [
       "perl_5"
    ],
