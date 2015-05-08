@@ -7,6 +7,9 @@ use HTTP::Tiny;
 use Net::Airbrake;
 use Data::Dumper;
 
+plan skip_all => 'Require AIRBRAKE_API_KEY and AIRBRAKE_PROJECT_ID env'
+    unless $ENV{AIRBRAKE_API_KEY} && $ENV{AIRBRAKE_PROJECT_ID};
+
 my $airbrake = Net::Airbrake->new(
     api_key     => $ENV{AIRBRAKE_API_KEY},
     project_id  => $ENV{AIRBRAKE_PROJECT_ID},
