@@ -11,6 +11,7 @@ use_ok 'Net::Airbrake';
 my $airbrake = Net::Airbrake->new(
     api_key    => 'testapikey',
     project_id => 99999999,
+    environment_name => 'test',
 );
 ok $airbrake, 'new()';
 

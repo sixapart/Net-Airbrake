@@ -33,10 +33,10 @@ Create a new instance.
 
     Required. Project ID.
 
-- environment
+- environment\_name
 
     Optional. The name of environment your application is running.
-    Default value is ueded $ENV{AIRBRAKE\_ENV} or $ENV{PLACK\_ENV} or 'default'.
+    Default value is ueded $ENV{PLACK\_ENV} or 'development'.
 
 # INSTANCE METHODS
 

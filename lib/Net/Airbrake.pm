@@ -14,7 +14,7 @@ use Net::Airbrake::Error;
 use Class::Tiny {
     api_key     => undef,
     project_id  => undef,
-    environment => $ENV{AIRBRAKE_ENV} || $ENV{PLACK_ENV} || 'default',
+    environment_name => $ENV{PLACK_ENV} || 'development',
     _errors     => sub { [] },
     _ua         => sub { HTTP::Tiny->new(agent => "Net-Airbrake/$VERSION", timeout => 5) }
 };
@@ -39,7 +39,7 @@ sub send {
     my $context = {
         os          => $^O,
         language    => "Perl $^V",
-        environment => $self->environment,
+        environment => $self->environment_name,
         %{$option->{context} || {}},
     };
     my $req = Net::Airbrake::Request->new({
@@ -116,10 +116,10 @@ Required. API Key of your project.
 
 Required. Project ID.
 
-=item environment
+=item environment_name
 
 Optional. The name of environment your application is running.
-Default value is ueded $ENV{AIRBRAKE_ENV} or $ENV{PLACK_ENV} or 'default'.
+Default value is ueded $ENV{PLACK_ENV} or 'development'.
 
 =back
 
