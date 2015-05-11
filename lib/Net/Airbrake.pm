@@ -119,7 +119,7 @@ Required. Project ID.
 =item environment_name
 
 Optional. The name of environment your application is running.
-Default value is ueded $ENV{PLACK_ENV} or 'development'.
+Default value is used $ENV{PLACK_ENV} or 'development'.
 
 =back
 

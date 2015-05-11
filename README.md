@@ -36,7 +36,7 @@ Create a new instance.
 - environment\_name
 
     Optional. The name of environment your application is running.
-    Default value is ueded $ENV{PLACK\_ENV} or 'development'.
+    Default value is used $ENV{PLACK\_ENV} or 'development'.
 
 # INSTANCE METHODS
 
