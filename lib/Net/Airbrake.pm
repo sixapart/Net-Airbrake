@@ -82,7 +82,7 @@ __END__
 
 =head1 NAME
 
-Net::Airbrake - Airbrake Notifier API Client
+Net::Airbrake - Airbrake Notifier API V3 Client
 
 =head1 SYNOPSIS
 
@@ -98,7 +98,7 @@ Net::Airbrake - Airbrake Notifier API Client
 
 =head1 DESCRIPTION
 
-Net::Airbrake is a client of L<Airbrake|https://airbrake.io>.
+Net::Airbrake is a client of L<Airbrake|https://airbrake.io> Notifier API V3.
 
 =head1 CLASS METHODS
 

@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/sixapart/Net-Airbrake.svg?branch=master)](https://travis-ci.org/sixapart/Net-Airbrake)
 # NAME
 
-Net::Airbrake - Airbrake Notifier API Client
+Net::Airbrake - Airbrake Notifier API V3 Client
 
 # SYNOPSIS
 
@@ -17,7 +17,7 @@ Net::Airbrake - Airbrake Notifier API Client
 
 # DESCRIPTION
 
-Net::Airbrake is a client of [Airbrake](https://airbrake.io).
+Net::Airbrake is a client of [Airbrake](https://airbrake.io) Notifier API V3.
 
 # CLASS METHODS
 
