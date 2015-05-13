@@ -15,6 +15,7 @@ use Class::Tiny {
     api_key     => undef,
     project_id  => undef,
     environment_name => $ENV{PLACK_ENV} || 'development',
+    base_url    => "https://airbrake.io",
     _errors     => sub { [] },
     _ua         => sub { HTTP::Tiny->new(agent => "Net-Airbrake/$VERSION", timeout => 5) }
 };
@@ -72,7 +73,7 @@ sub notify {
 sub _url {
     my $self = shift;
 
-    "https://airbrake.io/api/v3/projects/@{[$self->project_id]}/notices?key=@{[$self->api_key]}";
+    $self->base_url . "/api/v3/projects/@{[$self->project_id]}/notices?key=@{[$self->api_key]}";
 }
 
 1;
@@ -120,6 +121,11 @@ Required. Project ID.
 
 Optional. The name of environment your application is running.
 Default value is used $ENV{PLACK_ENV} or 'development'.
+
+=item base_url
+
+Optional. The server base URL to send report.
+Default is "https://airbrake.io".
 
 =back
 
