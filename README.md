@@ -38,6 +38,11 @@ Create a new instance.
     Optional. The name of environment your application is running.
     Default value is used $ENV{PLACK\_ENV} or 'development'.
 
+- base\_url
+
+    Optional. The server base URL to send report.
+    Default is "https://airbrake.io".
+
 # INSTANCE METHODS
 
 ## add\_error($error)

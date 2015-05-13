@@ -70,7 +70,7 @@
          "web" : "https://github.com/sixapart/Net-Airbrake"
       }
    },
-   "version" : "0.01",
+   "version" : "0.02",
    "x_authority" : "cpan:SIXAPART",
    "x_contributors" : [
       "ziguzagu <ziguzagu@gmail.com>"
