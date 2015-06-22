@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/sixapart/Net-Airbrake.svg?branch=master)](https://travis-ci.org/sixapart/Net-Airbrake)
+[![Build Status](https://travis-ci.org/sixapart/Net-Airbrake.svg?branch=master)](https://travis-ci.org/sixapart/Net-Airbrake) [![Coverage Status](https://coveralls.io/repos/sixapart/Net-Airbrake/badge.svg)](https://coveralls.io/r/sixapart/Net-Airbrake)
 # NAME
 
 Net::Airbrake - Airbrake Notifier API V3 Client
