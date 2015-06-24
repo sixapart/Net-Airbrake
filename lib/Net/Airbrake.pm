@@ -105,24 +105,24 @@ Net::Airbrake is a client of L<Airbrake|https://airbrake.io> Notifier API V3.
 
 =head2 new(\%param)
 
-Create a new instance.
+Create a new instance. Valid parameters include:
 
 =over 4
 
-=item api_key
+=item C<api_key>
 
 Required. API Key of your project.
 
-=item project_id
+=item C<project_id>
 
 Required. Project ID.
 
-=item environment_name
+=item C<environment_name>
 
 Optional. The name of environment your application is running.
 Default value is used $ENV{PLACK_ENV} or 'development'.
 
-=item base_url
+=item C<base_url>
 
 Optional. The server base URL to send report.
 Default is "https://airbrake.io".
@@ -139,29 +139,29 @@ following key/value pairs:
 
 =over 4
 
-=item type => String
+=item C<type> => String
 
 Required. Error type.
 
-=item message => String
+=item C<message> => String
 
 Required. Error message.
 
-=item backtrace => ArrayRef[HashRef]
+=item C<backtrace> => ArrayRef[HashRef]
 
 Optional. HashRef can contain followings key/value pairs:
 
 =over 8
 
-=item file => String
+=item C<file> => String
 
 File name an error occurred.
 
-=item line => Integer
+=item C<line> => Integer
 
 Line number an error occurred.
 
-=item function => String
+=item C<function> => String
 
 Subroutine name an error occurred.
 
@@ -177,25 +177,23 @@ Return true value if the instance has been added error by add_error().
 
 Send errors added by add_error() to Airbrake. \%option parameter is optional and
 all key/value pairs of its also optional. You can specify followings to report
- error details.
-
-details
+ error details. Valid parameters include:
 
 =over 4
 
-=item context => HashRef
+=item C<context> => HashRef
 
 Context values of its error.
 
-=item environment => HashRef
+=item C<environment> => HashRef
 
 Environment variables. Set HTTP Headers on web application as usual.
 
-=item session => HashRef
+=item C<session> => HashRef
 
 Session values. Set your application session parameters.
 
-=item params => HashRef
+=item C<params> => HashRef
 
 Request parameters. Set HTTP Request parameters on web application as usual.
 
